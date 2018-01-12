@@ -1,0 +1,7 @@
+/* propiedades basicas de visualizacion del elemento blockquote */
+.blockquote-content
+{
+    display: block;
+    margin-block-start: 40px;
+    margin-block-end: 40px;
+}
