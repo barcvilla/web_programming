@@ -1,20 +1,16 @@
-window.onload = change;
+const rainbow = ['red','orange','yellow','green','blue','rebeccapurple','violet'];
 
-const btn = window.document.getElementById('button1');
+function change() {
+    document.body.style.background = rainbow[Math.floor(7*Math.random())];
+  }
 
-const rainbow = ['red', 'orange', 'yellow', 'green', 'blue', 'rebeccapurple', 'violet'];
-
-function change()
+window.onload = function()
 {
-    document.body.style.background = rainbow[Math.floor(7 * Math.random)];
+    const btn = document.getElementById('button');
+    if(btn)
+    {
+        btn.addEventListener('click', change);
+    }
 }
 
-if(btn)
-{
-   btn.addEventListener('click', change, false);
-}
-else
-{
-    console.log("error...");
-}
-    
+  
