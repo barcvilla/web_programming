@@ -1,0 +1,17 @@
+:root
+{
+    --color: green;
+}
+
+body
+{
+    background: var(--color);
+    color: springgreen;
+    margin: 10px; /*separacion del elemento con respecto a los demas elementos*/
+}
+
+h1
+{
+    background: white;
+    color: var(--color);
+}
