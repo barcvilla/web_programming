@@ -1,0 +1,38 @@
+/* Selectores tipo o de etiqueta: este tipo de practicas no es recomendable
+   Lo que si es recomendable o una buena practica es añadir class a las etiquetas html5 */
+/*
+h1
+{
+    background: yellow;
+}
+
+p
+{
+    background: black;
+    color: green;
+}
+*/
+/*Acontinuacion referenciamos el atributo class del elemento html5. Tambien podemos usar el
+  atributo id pero se recomienda utilizarlo unicamente en javascript. Los selectores de id en css
+  se reconocen por #nombre_del_selector*/
+.title
+{
+    background: yellow;
+}
+
+.description
+{
+    background: black;
+    color: green;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.center
+{
+    text-align: center;
+}
+
