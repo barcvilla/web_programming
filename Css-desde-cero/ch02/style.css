@@ -15,9 +15,9 @@ p
 /*Acontinuacion referenciamos el atributo class del elemento html5. Tambien podemos usar el
   atributo id pero se recomienda utilizarlo unicamente en javascript. Los selectores de id en css
   se reconocen por #nombre_del_selector*/
-.title
+.title, .parrafo /*<- Selector agrupado*/
 {
-    background: yellow;
+    color: red;
 }
 
 .description
@@ -36,3 +36,20 @@ p
     text-align: center;
 }
 
+/* selectores descendientes: A todos los .list-item que son hijos de .list
+   Los selectores descendientes no se recomiendan usar, si los hijos ya tiene un atributo class
+   basta con especificar .list-item*/
+.list .list-item
+{
+    color: red;
+}
+/*Selector hijo directo: Todo ul que sea hijo directo de li*/
+li > ul
+{
+    display: none;
+}
+
+li:hover ul
+{
+    display: block;
+}
