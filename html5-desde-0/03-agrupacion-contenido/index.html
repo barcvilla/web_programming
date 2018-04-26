@@ -12,6 +12,7 @@
         <nav>
             <a href="#">Inicio</a>
             <a href="contacto.html">Contacto</a>
+            <a href="agrupacion-contenido-ejemplo1.html">Ejemplo 1</a>
         </nav>
         <h1>Html5 desde Cero - Clase 3</h1>
         <article>
@@ -64,10 +65,10 @@
             <section>
                 <h2>Otros Elementos</h2>
                 <h3>Ejemplo #4 - Uso Elemento Main</h3>
-                <main>
+                <main> <!--Main es el elemento mas importante en una pagina web-->
                     <p>Este es un parrafo, es decir un bloque de texto</p>
-                    <hr>
-                    <pre>
+                    <hr> <!--hr es imprime una linea pero en html significa cambio de seccion o capitulo-->
+                    <pre> <!--pre significa pre-formateado, es decir, el texto se morstrara tal cual en la pagina-->
                         Este texto
                                 se representara igual
                     en el navegador
@@ -76,6 +77,21 @@
                         Use blockquote para destacar citas
                     </blockquote>
                 </main>
+            </section>
+            <section>
+                <h3>Ejemplo #5 - Elemento DIV</h3>
+                <!--div y span son las dos etiquetas en html que no tienen un significado
+                div y span son dos contenedores para ser manipulados por javascript y css. Para decidir si usar un div u
+                otro elemento, nos debemos preguntar existe otro elemento en html que puede hacer esto en lugar de usar div?.
+                Si solo lo vas a utilizar para manipularlo con javascript y css podemos usar div-->
+                <div class="user">
+                    <div class="user_name">
+                        <p>Carlos Eduardo Villanueva Altuna</p>
+                    </div>
+                    <div class="user_image">
+                        <img src="img/carlos.jpg" alt="Mi foto">
+                    </div>
+                </div>
             </section>
         </article>
         <aside>
