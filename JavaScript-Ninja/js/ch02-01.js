@@ -50,10 +50,44 @@ function usingTemplateLiterals()
     console.log(`I will be ${age + 1} next year`);
 }
 
+function workingWithNumbers()
+{
+    console.log("Numero 42 es de tipo: " + typeof(42));
+    console.log("Numero 3.1415 es de tipo: " + typeof(3.1415));
+    console.log("Numero 42 es entero? " + Number.isInteger(42));
+    console.log("Numbero 3.1415 es entero? " + Number.isInteger(3.1415));
+
+    /*Construyendo un numero */
+    console.log("Construimos un nuevo numero: " + new Number(3));
+
+    /*Metodos aplicados a Number */
+    /*Al momento de llamar a un metodo de la clase Number debemos tener cuidado al usar la notacion de punto(5.isInteger()) 
+      ya que JavaScripts puede confundirse como si fuese un decimal. Hay varias alternativas para manejar esta situacion*/
+    console.log(5..toExponential()); // usamos dos puntos
+    console.log(5 .toExponential()); // usamos un espacio antes del punto
+    console.log(5.0.toExponential()); // siempre escribimos un integer como decimal
+    console.log((5).toExponential()); // colocamos el entero entre parentesis
+
+    /*Metodo toFixed() redondea un numero a numero de decimales fijos */
+    const PI = 3.1415926;
+    console.log("Constante PI redondeado a 3 posiciones decimales: " + PI.toFixed(3)); //el valor retornado es un string
+
+    /*Incrementando una variable */
+    let num1 = 5;
+    let num2 = 5;
+    console.log("Valor de num1: " + num1)
+    console.log("operacion 7 - 5++ = " + (7 - num1++));
+    console.log("nuevo valor de num1 - Post Increment = " + num1);
+
+    console.log("operacion: 7 - ++5 = " + (7 - ++num2));
+    console.log("numero valor de num1 - Pre Increment = " + num2);
+}
+
 function main()
 {
     declarandoVariables();
     usingTemplateLiterals();
+    workingWithNumbers();
 }
 
 main();
