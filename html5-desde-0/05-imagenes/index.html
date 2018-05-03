@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Aprendiendo HTML5 con EdTeam">
+        <meta name="viewport" content="width=device-width">
+        <title>HTML5 desde Cero - Clase 05</title>
+    </head>
+    <body>
+        <!--Insertamos una imagen con ruta absoluta-->
+        <!--<img src="https://images.pexels.com/photos/341372/pexels-photo-341372.jpeg?auto=compress&cs=tinysrgb&h=350" alt="novia">-->
+        <!--<img src="img/novia.jpg" alt="novia">-->
+        
+        <!--Atributos srcset
+        <img 
+            srcset="img/photographer.jpeg 320w, 
+                    img/dogs.jpeg 480w"
+            src="img/novia.jpeg">-->
+        <picture>
+            <source srcset="img/dogs.jpeg" media="(min-width: 320w)">
+            <source srcset="img/photographer.jpeg" media="(max-width: 480w)">
+            <img src="img/novia.jpeg" alt="novia">
+        </picture>
+    </body>
+</html>
