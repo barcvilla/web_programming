@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Aprendiendo HTML5 con EdTeam">
+        <link rel="icon" href="google-favicon-icon.png">
+        <link rel="stylesheet" href="style.css">
+        <title>HTML5 desde Cero - Clase 02</title>
+    </head>
+    <body>
+        <!--Aplicamos un header que no solo puede ser para una pagina sino tambien para encabezado de articulos-->
+        <header><img src="img/logo.png" alt=""></header>
+        <nav> <!--Aplicamos una barra de navegacion-->
+            <a href="#">Inicio</a> <!--el signo # indica que no ira a nungun lado el link-->
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        <h1>Elementos de Linea y de Bloque</h1>
+        <!--Elemento de Bloque: Ocupa o reserva todo el espacio disponible en pantalla y el siguiente elemento de bloque aparece
+            despues. Aunque ponemos manipularlos mediante css. Un parrafo <p></p> es un elemento de bloque-->
+        <!--Elemento de Linea: Estos elemento se van ubicando en una linea uno despues del otro. Span es un elemento de linea.
+            Los elementos de linea debe estar dentro de elementos de bloque-->
+        <!--Elementos de texto comunes
+        <p>
+            <small></small>
+            <strong></strong>
+            <em></em>
+            <cite></cite>
+            <dfn></dfn>
+            <code></code>
+            <data></data>
+            <br>    salto de linea
+            <q></q> quote
+            <abbr></abbr> abreviacion
+            <del></del> eliminacion
+            <wbr>   word break
+            <span></span> equivalente al div pero div es contenedor de bloque. Span es contenedor de texto
+            <sup></sup> super indice
+            <sub></sub> sub indice
+            <time></time>   para horas y fechas
+            <mark></mark>   resaltado del texto
+            <a href=''></a> links
+            <i></i> italic
+            <b></b> bold
+            <u></u> underline
+        </p>
+            -->
+        <h2>Elementos de bloque</h2>
+        <p>Parrafo 1</p>
+        <p>Parrafo 2 <span>con span</span> </p> <!--con elemento de linea <span></span>-->
+
+        <h2>Links en HTML5</h2>
+        <p>
+            <!--Ruta absoluta: son rutas que no se repiten, es decir son unicas y siempre inicia con un protocolo-->
+            <a href="https://ed.team">Educacion con honestidas</a>
+            <!--Ruta Relativa, cuando la pagina esta en la misma carpeta-->
+            <a href="contacto.html">pagina de contactos</a> <!--tambien podemos usar <a href="./destino.hmtl"></a> es lo mismo-->
+            <!--Ruta Relativa, cuando el recurso esta en una sub-csrpeta-->
+            <a href="./subcarpeta/contacto1.html">mas contactos</a>
+            <!--Ruta Relativa, carpeta superior-->
+            <a href="../index.html">Index del curso</a>
+            <!--Ruta Relativa, una sub-carpeta arriba y sub-carpeta adentro-->
+            <a href="../03-agrupacion-contenido/index.html">Clase 3</a>
+            <!--Ruta Relativa a la raiz del proyecto-->
+            <a href="/raiz-del-proyecto.html"></a>
+        </p>
+
+        <h2>Marcadores</h2>
+        <p>
+            <ul id="inicio">
+                <li><a href="#infancia">Infancia</a></li>
+                <li><a href="#juventud">Juventud</a></li>
+                <li><a href="#exito">Exito</a></li>
+            </ul>
+        </p>
+        <p>
+            <h2 id="infancia">Infancia</h2>
+            <a href="#inicio">ir al inicio</a>
+        </p>
+        <p>
+            <h2 id="juventud">Juventud</h2>
+            <a href="#inicio">ir al inicio</a>
+        </p>
+        <p>
+            <h2 id="exito">Exito</h2>
+            <a href="#inicio">ir al inicio</a>
+        </p>
+
+        <footer> <!--para notas al pie, creditos etc.-->
+            <p>
+                Carlos Eduardo
+            </p>
+        </footer>
+        <script src="scripts.js"></script>
+    </body>    
+</html>
