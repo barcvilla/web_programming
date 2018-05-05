@@ -83,11 +83,35 @@ function workingWithNumbers()
     console.log("numero valor de num1 - Pre Increment = " + num2);
 }
 
+function workingWithStringAndNumbers()
+{
+    /*Convertirmos un String a Number*/
+    console.log("Convertimos String(3) en Number:  " + Number('3'));
+    /*Convertimos un Number a String*/
+    console.log("Convertimos Number(3) en String(3):  " + String(3));
+    /*Otra forma de convertir Number a String*/
+    console.log("Convertimos Number a String:  " + 10..toString());
+
+    /*Parsing Numbers: Convertirmos una representacion String de un numero al tipo Number. Debemos especificar la base del
+      numero que intentamos convertir*/
+    console.log("Convertimos '1010':  " + parseInt('1010', 10));
+    console.log("Convertimos '23':  " + parseInt('23', 10));
+    const address = '221 Baker Street';
+    console.log("Convertimos '221 Baker Street en Number:  " + parseInt(address, 10));
+    
+    /*Si utilizamos parseInt() con un valor decimal, la parte decimal se perdera*/
+    console.log("Convertirmos '2.4' usando parseInt(): " + parseInt(2.4));
+
+    /*Si tenemos un decimal string y queremos conservar el numero completo usamos parseFloat()*/
+    console.log("Convertimos '2.9' usando parseFloat():  " + parseFloat(2.9));
+}
+
 function main()
 {
     declarandoVariables();
     usingTemplateLiterals();
     workingWithNumbers();
+    workingWithStringAndNumbers();
 }
 
 main();
