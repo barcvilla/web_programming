@@ -83,6 +83,15 @@ function workingWithNumbers()
     console.log("numero valor de num1 - Pre Increment = " + num2);
 }
 
+function workingUndefinedAndNull()
+{
+    /*Undefined: se produce cuando declaramos una variable sin asignale un valor*/
+    /*Null: null significa 'sin valor' null lo usa javascript para decir "deberia haber un valor aqui, pero no hay uno
+      en este momento"*/
+      console.log("Sumando 10 + null:  " + (10 + null));
+      console.log("Sumando 10 + undefined: " + (10 + undefined));
+}
+
 function workingWithStringAndNumbers()
 {
     /*Convertirmos un String a Number*/
@@ -106,12 +115,34 @@ function workingWithStringAndNumbers()
     console.log("Convertimos '2.9' usando parseFloat():  " + parseFloat(2.9));
 }
 
+function workingWithBooleans()
+{
+    /*ejemplos de Boolean = true*/
+    console.log("Boolean('hello') retorna:  " + Boolean('hello'));
+    console.log("Boolean(42) retorna:  " + Boolean(42));
+
+    /*Only 9 valores son siempre false y estos son conocidos como falsy values*/
+    /**
+     * "" comillas dobles vacias
+     * '' comillas simples vacias
+     * `` template literal vacio
+     * 0  
+     * -0 considerado a diferente de 0 por JavaScript
+     * NaN 
+     * false
+     * null
+     * undefined
+     */
+}
+
 function main()
 {
     declarandoVariables();
     usingTemplateLiterals();
     workingWithNumbers();
     workingWithStringAndNumbers();
+    workingUndefinedAndNull();
+    workingWithBooleans();
 }
 
 main();
