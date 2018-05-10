@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <!--meta para responsive web -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprendiendo HTML5 con EdTeam">
+    
+    <title>HTML5 desde Cero - Clase 08 - Formularios</title>
+</head>
+
+<body>
+    <h1>Trabajando con Formularios</h1>
+    <form>
+        <fieldset>
+            <legend>Mis datos personales</legend>
+            <div>
+                <label>
+                    Ingrese su nombre: 
+                    <input id="userName" name="userName">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Ingrese su email:
+                    <input type="email">
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Mis datos de usuario</legend>
+            <div>
+                <label>
+                    Ingrese su password: 
+                    <input name="userPassword" type="password">
+                </label>
+            </div>   
+            <div>
+                <label>
+                    Ingrese Fecha Nacimiento:
+                    <input type="date">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Ingrese su telefono:
+                    <input type="number">
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Mis pasatiempos</legend>
+            <div>
+                <label>
+                    <input type="checkbox"> Deporte
+                </label>
+                <label>
+                        <input type="checkbox"> Cine
+                </label>
+                <label>
+                        <input type="checkbox"> Musica
+                </label>
+                <label>
+                        <input type="checkbox"> Leer
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Sexo</legend>
+            <div>
+                <label>
+                    <input type="radio" name="gender">Hombre
+                </label>
+                <label>
+                    <input type="radio" name="gender"> Mujer
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Select and Options</legend>
+            <div>
+                <label for="country">Elige tu pais</label>
+                <select id="country" name="country">
+                    <option value="pe">Peru</option>
+                    <option value="ar">Argentina</option>
+                    <option value="co">Colombia</option>
+                </select>
+            </div>
+        </fieldset>
+        <div>
+            <input type="button" value="Iniciar Session">
+        </div>
+    </form>
+    <script>
+        document.getElementById('userName').addEventListener('keyup', e => {console.log(e.target.value)})
+    </script>
+</body>
+</html>
