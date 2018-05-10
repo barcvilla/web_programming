@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <!--meta para responsive web -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprendiendo HTML5 con EdTeam">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML5 desde Cero - Clase 06 - Semantica y MicroDatos</title>
+</head>
+
+<body>
+     <!--Article:Elemento de contenido unico por ejemplo: un tema en un blog, una noticia, un tutorial etc-->
+        <!--Aplicamos un header que no solo puede ser para una pagina sino tambien para encabezado de articulos-->
+    <article itemscope itemtype=" http://schema.org/Blog">
+        <h2>Curso HTML 5.2</h2>
+        <P>Este curso abarca el lenguaje de marcado HTML y su version reciente 5.2</P>
+        <footer>
+            <p itemprop="author">Carlos Villanueva A.</p>
+        </footer>
+    </article>
+    <!--
+    <article>  
+      <h2>Zapatillas Deportivas</h2>
+      <img src="zapatilla1.jpeg" alt="Foto de Zapatillas 1">
+      <p>
+          Marca: <span>Nike</span>
+      </p>  
+      <p>
+          Precio: <span>300.00</span>
+      </p>
+    </article>
+    -->
+</body>
+</html>

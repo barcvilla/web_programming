@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <!--meta para responsive web -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprendiendo HTML5 con EdTeam">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML5 desde Cero - Clase 07 - Trabajando con Tablas</title>
+</head>
+<body>
+    <table>
+        <caption>Mi horario de clase 2018</caption>
+        <!--Para aplicar alguna propiedad a toda una columna-->
+        <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col style="background: yellow">
+        </colgroup>
+        <thead>
+            <tr>
+                <!--Encabezados-->
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Html</td>
+                <td>Php</td>
+                <td rowspan="2">JavaScript</td>
+                <td>Python</td>
+                <td >Css</td>
+            </tr>
+            <tr>
+                <td>Go</td>
+                <td>Big Data</td>
+                <td>UX Design</td>
+            </tr>
+    
+            <tr>
+                <td colspan="5">RECREO</td>
+            </tr>
+
+            <tr>
+                <td>Java</td>
+                <td>SQL</td>
+                <td>Algoritmos</td>
+                <td>Anguar</td>
+                <td>Progressive Web Apps</td>
+            </tr>            
+            <tfoot> <!--sector para sub totales o resumen-->
+                <tr>
+                    <td>6 creditos</td>
+                    <td>3 creditos</td>
+                    <td>4 creditos</td>
+                    <td>2 creditos</td>
+                    <td>7 creditos</td>
+                </tr>
+            </tfoot>
+        </tbody>
+    </table>
+</body>
+</html>
