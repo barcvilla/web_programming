@@ -18,13 +18,13 @@
             <div>
                 <label>
                     Ingrese su nombre: 
-                    <input id="userName" name="userName">
+                    <input id="userName" name="userName" required>
                 </label>
             </div>
             <div>
                 <label>
                     Ingrese su email:
-                    <input type="email">
+                    <input type="email" required>
                 </label>
             </div>
         </fieldset>
@@ -33,7 +33,7 @@
             <div>
                 <label>
                     Ingrese su password: 
-                    <input name="userPassword" type="password">
+                    <input name="userPassword" type="password" required>
                 </label>
             </div>   
             <div>
@@ -79,17 +79,29 @@
         </fieldset>
         <fieldset>
             <legend>Select and Options</legend>
-            <div>
+            <div>   
                 <label for="country">Elige tu pais</label>
-                <select id="country" name="country">
-                    <option value="pe">Peru</option>
-                    <option value="ar">Argentina</option>
-                    <option value="co">Colombia</option>
+                <select id="country" name="country" multiple>
+                    <optgroup label="Iberoamerica">
+                        <option value="pe">Peru</option>
+                        <option value="ar">Argentina</option>
+                        <option value="co">Colombia</option>
+                    </optgroup>
+                    <optgroup label="Europa">
+                        <option value="es">Inglaterra</option>
+                        <option value="fr">Francia</option>
+                    </optgroup>
                 </select>
             </div>
         </fieldset>
+        <fieldset>
+            <legend>Sugerencias</legend>
+            <div>
+                <textarea name="sugerencia" id="sugerencia" cols="100" rows="5" placeholder="Escribenos tus sugerencias aqui..."></textarea>
+            </div>
+        </fieldset>
         <div>
-            <input type="button" value="Iniciar Session">
+            <input type="submit" value="Iniciar Session">
         </div>
     </form>
     <script>
