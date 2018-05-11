@@ -25,6 +25,16 @@ function workingWithArrays()
 
     /*Obtenemos el ultimo elemento del array*/
     console.log("Ultimo elemento del array: " + heroes[heroes.length - 1]);
+
+    /*Metodos: POP, PUSH, SHIFT, UNSHIFT*/
+    console.log("Removemos el ultimo elemento: " + heroes.pop());
+    console.log(heroes);
+
+    console.log("Removemos el primer elemento del array: " + heroes.shift()); 
+    console.log(heroes);
+
+    console.log("Adicionamos un nuevo elemento: " + heroes.push('Captain America'));
+    console.log(heroes);
 }
 
 function main()
