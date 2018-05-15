@@ -69,6 +69,18 @@ function workingWithArrays()
 
     /**el metodo sort() - permite ordenar los elemento de un array */
     console.log("Array ordenado: " + avengers.sort());
+
+    /**Buscando si un elemento esta en el array */
+    console.log("El indice de Iron Man es: " + avengers.indexOf('Iron Man'));
+
+    /**si el elemento no esta en el array, retora -1 */
+    console.log("El indice de Chapulin es: " + avengers.indexOf('Chapulin'));
+
+    /**metodo includes() - retorna a boolean si el array contiene un elemento particular */
+    console.log("Se encuentra Thor en el array?: " + avengers.includes('Thor'));
+
+    /**al metodo include() podemos adicionar un parametro extra para indicar desde que indice inicia la busqieda */
+    console.log("Buscamos Black Widow desde el indice 2: " + avengers.includes('Black Widow', 3));
 }
 
 function main()
