@@ -18,13 +18,19 @@
             <div>
                 <label>
                     Ingrese su nombre: 
-                    <input id="userName" name="userName" required>
+                    <input id="userName" name="userName" autocomplete="on" required autofocus placeholder="ingrese nombre">
                 </label>
             </div>
             <div>
                 <label>
                     Ingrese su email:
-                    <input type="email" required>
+                    <input type="email" required placeholder="ingrese email">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Search text:
+                    <input type="search" name="#" autocomplete="on" placeholder="Ingrese texto a buscar">
                 </label>
             </div>
         </fieldset>
@@ -39,13 +45,25 @@
             <div>
                 <label>
                     Ingrese Fecha Nacimiento:
-                    <input type="date">
+                    <input type="date" name="#">
                 </label>
             </div>
             <div>
                 <label>
-                    Ingrese su telefono:
-                    <input type="number">
+                    Numero de hijos:
+                    <input type="number" min="0" max="16">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Rango de salario:
+                    <input type="range" value="500" min="0" max="45000">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Seleccione su color:
+                    <input type="color" id="#">
                 </label>
             </div>
         </fieldset>
@@ -93,6 +111,15 @@
                     </optgroup>
                 </select>
             </div>
+        </fieldset>
+        <fieldset>
+            <legend>Using Combo List</legend>
+            <label for="browsers"> Elige su browser: </label>
+            <input list="browsers" name="browser">
+            <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+            </datalist>
         </fieldset>
         <fieldset>
             <legend>Sugerencias</legend>
