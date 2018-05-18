@@ -66,6 +66,12 @@
                     <input type="color" id="#">
                 </label>
             </div>
+            <div>
+                <label>
+                    Codigo Postal:
+                    <input type="text" name="country_code" pattern="[A-Za-z]{3}" placeholder="Tres letras de codigo postal">
+                </label>
+            </div>
         </fieldset>
         <fieldset>
             <legend>Mis pasatiempos</legend>
@@ -113,9 +119,10 @@
             </div>
         </fieldset>
         <fieldset>
-            <legend>Using Combo List</legend>
+            <legend>Using List drop down</legend>
             <label for="browsers"> Elige su browser: </label>
             <input list="browsers" name="browser">
+            <!--datalist tiene opciones predefinidas para un elemento <input>-->
             <datalist id="browsers">
                 <option value="Internet Explorer">
                 <option value="Firefox">
