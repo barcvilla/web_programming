@@ -81,6 +81,13 @@ function workingWithArrays()
 
     /**al metodo include() podemos adicionar un parametro extra para indicar desde que indice inicia la busqieda */
     console.log("Buscamos Black Widow desde el indice 2: " + avengers.includes('Black Widow', 3));
+
+    /**Arreglos multidimensionales */
+    let coordinates = [[1,3], [4,2]];
+    console.log(coordinates[0][0]); // obtenemos el primer valor del primer array
+    console.log(coordinates[1][0]); // obtenemos el primer valor del segundo array
+    console.log(coordinates[0][1]); // obtenemos el segundo valor del primer array
+    console.log(coordinates[1][1]); // obtenemos el segundo valor del segundo array
 }
 
 function main()
