@@ -1,17 +1,31 @@
-:root
-{
-    --color: green;
+h1{
+    color: #2f4f4f;
+    margin-bottom: 10px; /*reducimos margenes*/
 }
-
-body
-{
-    background: var(--color);
-    color: springgreen;
-    margin: 10px; /*separacion del elemento con respecto a los demas elementos*/
+/*id selectors*/
+#main-nav{
+    margin-top: 10px; /*reducimos margenes*/
+    /*removemoos user agent list styles*/
+    list-style: none; 
+    padding-left: 0;
 }
-
-h1
-{
-    background: white;
-    color: var(--color);
+#main-nav li{
+    display: inline-block; /*mostramos los elementos de la lista*/
+}
+/*selector de especificidad superior*/
+#main-nav a{
+    /*le damos apariencia de botones a los links para la navegacion*/
+    color: white;
+    background-color: #13a4a4;
+    padding: 5px;
+    border-radius: 2px;
+    text-decoration: none;
+}
+/*class selector*/
+/*esta caracteristica no funciona xq el primer selector (#main-nav li) es mas especifico que el segundo. El primero
+  esta compuesto por una identificacion y un nombre de etiqueta y el segundo esta compuesto por un nombre de clase.
+  Los diferentes tipos de selectores tienen diferentes especificidades. Un selector ID tiene una especificidad mas alta
+  que un selector de clase. De igual forma un selector de clase tiene mayor especificidad que un selector de etiqueta*/
+.featured{
+    background-color: orange;
 }
