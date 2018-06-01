@@ -2,18 +2,23 @@ h1{
     color: #2f4f4f;
     margin-bottom: 10px; /*reducimos margenes*/
 }
-/*id selectors*/
-#main-nav{
+/*class selectors*/
+.nav{
     margin-top: 10px; /*reducimos margenes*/
     /*removemoos user agent list styles*/
     list-style: none; 
     padding-left: 0;
 }
-#main-nav li{
+.nav li{
     display: inline-block; /*mostramos los elementos de la lista*/
 }
-/*selector de especificidad superior*/
-#main-nav a{
+/*selector de especificidad superior compuesto por un selector id (#main-nav) y un nombre de etiqueta (a)
+  Los diferentes tipos de selectores tienen diferentes especificidades.
+  Un selector ID tiene una especificidad mas alta que un selector de clase. De igual forma un selector 
+  de clase tiene mayor especificidad que un selector de etiqueta*/
+
+/*Bajamos la especificidad a id = 0, class = 1, etiqueta = 1 (0, 1, 1)*/
+.nav a{
     /*le damos apariencia de botones a los links para la navegacion*/
     color: white;
     background-color: #13a4a4;
@@ -21,11 +26,52 @@ h1{
     border-radius: 2px;
     text-decoration: none;
 }
-/*class selector*/
-/*esta caracteristica no funciona xq el primer selector (#main-nav li) es mas especifico que el segundo. El primero
+/*class selector - tiene menor especificidad ya que solo esta conformado por un nombre de clase.*/
+/*esta caracteristica no funciona xq el primer selector (#main-nav a) es mas especifico que el segundo. El primero
   esta compuesto por una identificacion y un nombre de etiqueta y el segundo esta compuesto por un nombre de clase.
-  Los diferentes tipos de selectores tienen diferentes especificidades. Un selector ID tiene una especificidad mas alta
-  que un selector de clase. De igual forma un selector de clase tiene mayor especificidad que un selector de etiqueta*/
+  
+SEGUNDA SOLUCION: Incluir !important
+
 .featured{
+    background-color: orange !important;
+}
+Las reglas de especificidad:
+ 1. Si el selector tiene mas ID, este gana (este es, mas especifico)
+ 2. Si el resultado es un empate, gana el selector con mayor cantidad de clases
+ 3. Si eso es un empate, gana el selector con mas nombres de etiqueta
+ */
+ 
+ /*Aumentamos la Especificidad del selector a (0,2,0) - 
+ 
+ TERCERA SOLUCION: Aumentamos la Especificidad
+ 
+ .nav .featured
+ {
+     background-color: orange;
+ }
+ */
+
+/*CUARTA SOLUCION - Manipulamos el orden de la fuente
+  Igualamos la especificidad: (0, 1, 1)*/
+a.featured
+{
     background-color: orange;
+}
+
+/*LINK STYLE*/
+a:link{
+    color: blue;
+    text-decoration: none;
+}
+a:visited
+{
+    color: purple;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+a:active
+{
+    color: red;
 }
