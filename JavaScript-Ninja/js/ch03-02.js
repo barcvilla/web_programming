@@ -35,6 +35,11 @@ function workingWithSets()
     /**clear() remueve todos los valores de un Set */
     jla.clear;
     console.log('Eliminamos todos los elementos Set: ' + jla)
+
+    /**Converting Sets to Array */
+    let shoppingSet = new Set().add('Apples').add('Bananas').add('Beans');
+    let shoppingArray = Array.from(shoppingSet);
+    console.log(shoppingArray);
 }
 
 function main()

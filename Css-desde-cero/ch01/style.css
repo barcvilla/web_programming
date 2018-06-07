@@ -75,3 +75,7 @@ a:active
 {
     color: red;
 }
+body
+{
+    font-family: sans-serif;
+}
