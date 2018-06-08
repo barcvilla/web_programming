@@ -36,6 +36,8 @@ function workingWithMaps()
      * primitivas, y el garbage collector automaticamente remueve alguna entrada muerta cuando la referencia al objeto
      * original esta eliminada.
      */
+    let weakMap = new WeakMap();
+    
 }
 
 function main()
