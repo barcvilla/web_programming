@@ -1,6 +1,12 @@
 h1{
     color: #2f4f4f;
     margin-bottom: 10px; /*reducimos margenes*/
+    font-weight: bold;
+}
+
+.title
+{
+    font: 32px Helvetica, Arial, sans-serif;
 }
 /*class selectors*/
 .nav{
@@ -60,8 +66,8 @@ a.featured
 
 /*LINK STYLE*/
 a:link{
-    color: blue;
-    text-decoration: none;
+    color: blue; /*color global para todos los links*/
+    
 }
 a:visited
 {
@@ -77,5 +83,21 @@ a:active
 }
 body
 {
+    /*Propiedade heredada, se aplicara a los elementos descendientes*/
     font-family: sans-serif;
+}
+.footer
+{
+    color: #666; /*el color de texto del footer a gris*/
+    background-color: #ccc;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer a
+{
+    color: inherit; /*heredamos el color del footer. Esta regla sobrescribe el color azul del link*/
+    /*color: initial - vuelve al color inicial a un elemento. En ese caso link de color negro.*/
+    text-decoration: underline;
 }
