@@ -28,9 +28,16 @@ h1{
     /*le damos apariencia de botones a los links para la navegacion*/
     color: white;
     background-color: #13a4a4;
-    padding: 5px;
+    /*padding: 10px 15px 0 5px; especificamos top - right - bottom - left padding*/
+    padding: 5px 15px; /*especificamos top &*/
     border-radius: 2px;
     text-decoration: none;
+}
+
+.nav .featured
+{
+    background-color: orange;
+    box-shadow: 10px 2px #666;
 }
 /*class selector - tiene menor especificidad ya que solo esta conformado por un nombre de clase.*/
 /*esta caracteristica no funciona xq el primer selector (#main-nav a) es mas especifico que el segundo. El primero
