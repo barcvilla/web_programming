@@ -1,55 +1,22 @@
-/* Selectores tipo o de etiqueta: este tipo de practicas no es recomendable
-   Lo que si es recomendable o una buena practica es añadir class a las etiquetas html5 */
-/*
-h1
+.padded
 {
-    background: yellow;
+    font-size: 16px;
+    padding: 2em; /*set padding en todos lados igual al font-size. El padding es multiplicado por el 16px.
+    usar ems puede ser conveniente cuando establecemos propiedades como padding, height, width, border-radius*/
+}
+.box
+{
+    padding: 1em;
+    border-radius: 1em;
+    background-color: lightgray;
+}
+/*diferentes font-sizes, el cual definira el tamano em de los elementos*/
+.box-small
+{
+    font-size: 12px;
 }
 
-p
+.box-large
 {
-    background: black;
-    color: green;
-}
-*/
-/*Acontinuacion referenciamos el atributo class del elemento html5. Tambien podemos usar el
-  atributo id pero se recomienda utilizarlo unicamente en javascript. Los selectores de id en css
-  se reconocen por #nombre_del_selector*/
-.title, .parrafo /*<- Selector agrupado*/
-{
-    color: red;
-}
-
-.description
-{
-    background: black;
-    color: green;
-}
-
-.bold
-{
-    font-weight: bold;
-}
-
-.center
-{
-    text-align: center;
-}
-
-/* selectores descendientes: A todos los .list-item que son hijos de .list
-   Los selectores descendientes no se recomiendan usar, si los hijos ya tiene un atributo class
-   basta con especificar .list-item*/
-.list .list-item
-{
-    color: red;
-}
-/*Selector hijo directo: Todo ul que sea hijo directo de li*/
-li > ul
-{
-    display: none;
-}
-
-li:hover ul
-{
-    display: block;
+    font-size: 18px;
 }
