@@ -36,6 +36,32 @@ function numbers(...args)
     }
 }
 
+/**Trabajando con parametros Rest. Todos los argumentos ingresan en un array llamado values */
+function mean(...values)
+{
+    let total = 0;
+    for(const value of values)
+    {
+        total = total + value;
+    }
+    return total / values.length;
+}
+
+/**Parametros por defecto. Para un parametro por defecto, simplemente asignamos un default value en la definicion 
+ * de la funcion
+ */
+function hello(name="World!")
+{
+    console.log(`Hello ${name}`);
+}
+
+/**Default Parameters deben ir simpre despues de un parametro non default */
+function discount(price, amount = 10)
+{
+    return price * ((100 - amount) / 100);
+}
+
+
 function main()
 {
     hello();
@@ -49,6 +75,11 @@ function main()
     console.log(hi); 
     console.log(square(9));
     console.log(numbers(1,2,3,4,5));
+    console.log(mean(2,8,13,11,4,2));
+    hello();
+    console.log(discount(20));
+    /**proveemos un descuento diferente al parametro por defecto */
+    console.log(discount(15, 20));
 }
 
 main();
