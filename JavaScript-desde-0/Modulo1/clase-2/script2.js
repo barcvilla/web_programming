@@ -78,9 +78,65 @@ function workingWithStrings()
 
 }
 
+function workingWithConditionals()
+{
+    if (true) {
+        console.log("Se cumplio la condicion");
+    }else{
+        console.log("no se cumplio la condicion");
+    }
+
+    if (5 != 3 && 5 > 2) {
+        console.log("se cumplio la condicion");
+    }else{
+        console.log("no se cumplio la condicion");
+    }
+
+    if (5 != 3 || 5 < 10) {
+        console.log("se cumplio la condicion");
+    }else{
+        console.log("no se cumplio la condicion");
+    }
+
+    let edad = 10;
+
+    if (edad < 12) {
+        console.log("Eres un nene");
+    }else if(edad >= 12 && edad < 18){
+        console.log("Eres adolescete");
+    }else if(edad > 18 && edad < 60){
+        console.log("Eres adulto");
+    }else{
+        console.log("eres anciano");
+    }
+
+    // Truthy : String no vacions, [], {}, numeros diferentes de cero.
+    // falsy : 0, String vacios, undefined, null, NaN
+
+    if (edad) {
+        console.log("Ingresaste una edad");
+    }
+
+    // Switch
+    switch (edad) {
+        case 10:
+            console.log("Escribiste 10");
+            break;
+        default:
+            console.log("Escribiste otro numero");
+            break;
+    }
+
+    // Operador Ternario: Es una forma abreviada de construir un condicional if
+    let nombre = "Jose Antonio";
+
+    nombre.length > 5 ? console.log("Tienes un nombre largo") : console.log("Tienes un nombre corto");
+}
+
  function main()
  {
      workingWithStrings();
+     workingWithConditionals();
  }
 
  main();
