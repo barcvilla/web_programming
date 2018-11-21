@@ -133,10 +133,77 @@ function workingWithConditionals()
     nombre.length > 5 ? console.log("Tienes un nombre largo") : console.log("Tienes un nombre corto");
 }
 
+function workingWithLoops()
+{
+    let teachers = ['Mario', 'Alexys', 'John', 'Daniel', 'Francisco', 'Daniel', 'Rafael', 'Jose', 'Alvaro'];
+    console.log('Imprimir nombres mayo o igual 5')
+    for(let i = 0; i < teachers.length; i++)
+    {
+        if(teachers[i].length >= 5)
+        {
+            console.log(teachers[i]);
+        }
+    }
+
+    console.log('Imprimir nombres que no inicien con A')
+    for(let i = 0; i < teachers.length; i++)
+    {
+        if(teachers[i].toUpperCase().indexOf('A') == 0)
+        {
+            /*Si el nombre inicia con A saltamos la iteracion */
+            continue;
+        }
+        console.log(teachers[i]);
+    }
+
+    console.log('Imprime nombres que no inicien con A, si es asi, termina el loop')
+    for(let i = 0; i < teachers[i].length; i++)
+    {
+        if(teachers[i].toUpperCase().indexOf('A') == 0)
+        {
+            break;
+        }
+        console.log(teachers[i]);
+    }
+}
+
+function workingWithWhileLoop()
+{
+    let i = 10;
+    while(i > 0)
+    {
+        console.log(`ciclo while ${i}`);
+        i--;
+    }
+}
+
+function workWithDoWhile()
+{
+    let password = 'ED';
+    let pass;
+    do{
+        pass = prompt('Ingrese su password: ')
+    }
+    while(pass != 'ED');
+}
+
+function workingWithForOf()
+{
+    let teachers = ['Mario', 'Alexys', 'John', 'Daniel', 'Francisco', 'Daniel', 'Rafael', 'Jose', 'Alvaro'];
+    for(let teacher of teachers)
+    {
+        console.log(teacher);
+    }
+}
+
  function main()
  {
      workingWithStrings();
      workingWithConditionals();
+     workingWithLoops();
+     workingWithWhileLoop();
+     //workWithDoWhile();
+     workingWithForOf();
  }
 
  main();
