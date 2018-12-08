@@ -21,21 +21,40 @@
         <fieldset>
             <legend>Mis datos personales</legend>
             <div>
+                <!--Hay dos formas de usar la etiqueta Label-->
+                <label for="nombres">Ingrese su Nombre: </label>
+                <input id="nombres" placeholder="ingrese su nombre"/>
+            </div>
+            <div>
                 <label>
-                    Ingrese su nombre: 
-                    <input id="userName" name="userName" autocomplete="on" required autofocus placeholder="ingrese nombre">
+                    <!--Input Element. Por defecto set type = "text"
+                        type{radio, checkbox, color, email, url, password, tel, search, date, time, number}
+                        todo elemento deberia tener su atributo id y name
+                        name : mediante este atributo el servidor puede identificar cada elemento de la pagina
+                        value: toma el valor que el usuario ingresa o muestra el valor de una propiedad de clase en el backend
+                        Atributos Booleans values: required, disabled, checked, selected, 
+                                  multiple(un campo recibe multiple values), autofocus, readonly
+                    -->
+                    Ingrese su user name: 
+                    <input id="userName" name="userName" autocomplete="on" required autofocus placeholder="ingrese username">
                 </label>
             </div>
             <div>
                 <label>
                     Ingrese su email:
-                    <input type="email" required placeholder="ingrese email">
+                    <input type="email" id="email" name="email" required placeholder="ingrese email">
                 </label>
             </div>
             <div>
                 <label>
                     Search text:
                     <input type="search" name="#" autocomplete="on" placeholder="Ingrese texto a buscar">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Seleccione foto:
+                    <input type="file" />
                 </label>
             </div>
         </fieldset>
@@ -62,7 +81,7 @@
             <div>
                 <label>
                     Rango de salario:
-                    <input type="range" value="500" min="0" max="45000">
+                    <input type="range" value="500" min="0" max="25000" step="3000">
                 </label>
             </div>
             <div>
@@ -77,12 +96,22 @@
                     <input type="text" name="country_code" pattern="[A-Za-z]{3}" placeholder="Tres letras de codigo postal">
                 </label>
             </div>
+            <div>
+                <label>
+                    Situacion Laboral
+                    <select name="situacionLaboral" id="situacionLaboral">
+                        <option value="empleado" >Empleado</option>
+                        <option value="desempleado">Desempleado</option>
+                        <option value="retirado">Retirado</option>
+                    </select>
+                </label>
+            </div>
         </fieldset>
         <fieldset>
             <legend>Mis pasatiempos</legend>
             <div>
                 <label>
-                    <input type="checkbox"> Deporte
+                    <input type="checkbox" checked> Deporte
                 </label>
                 <label>
                         <input type="checkbox"> Cine
@@ -110,7 +139,7 @@
             <legend>Select and Options</legend>
             <div>   
                 <label for="country">Elige tu pais</label>
-                <select id="country" name="country" multiple>
+                <select id="country" name="country" size="7" multiple>
                     <optgroup label="Iberoamerica">
                         <option value="pe">Peru</option>
                         <option value="ar">Argentina</option>
@@ -142,6 +171,7 @@
         <div>
             <input type="submit" value="Iniciar Session">
             <input type="image" src="img/login.png" width="180" >
+            <input type="reset" value="Limpiar" /> <!--limpia el contenido ingresado por el usuario en el formulario-->
         </div>
     </form>
     <script>
