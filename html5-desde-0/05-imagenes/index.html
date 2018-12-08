@@ -8,18 +8,41 @@
     </head>
     <body>
         <!--Insertamos una imagen con ruta absoluta-->
-        <!--<img src="https://images.pexels.com/photos/341372/pexels-photo-341372.jpeg?auto=compress&cs=tinysrgb&h=350" alt="novia">-->
-        <!--<img src="img/novia.jpg" alt="novia">-->
+        <img src="https://images.pexels.com/photos/341372/pexels-photo-341372.jpeg?auto=compress&cs=tinysrgb&h=350" alt="novia">
+        <img src="img/novia.jpeg" alt="novia">
         
-        <!--Atributos srcset
+        <!--Atributos srcset-->
         <img 
             srcset="img/photographer.jpeg 320w, 
                     img/dogs.jpeg 480w"
-            src="img/novia.jpeg">-->
+            src="img/novia.jpeg">
+        
         <picture>
             <source srcset="img/dogs.jpeg" media="(min-width: 320w)">
             <source srcset="img/photographer.jpeg" media="(max-width: 480w)">
             <img src="img/novia.jpeg" alt="novia">
         </picture>
+
+        <!--<figure> es una etiqueta que nos permite destacar una imagen con un titulo-->
+        <figure>
+            <img src="img/dogs.jpeg" alt="perritos">
+            <figcaption>Imagen 5.1 - Lindos Perritos</figcaption>
+        </figure>
+
+        <!--Multimedia-->
+        <video 
+            src="media/LA GRACIA del Domingo 21 de Octubre de 2018.mp4" 
+            width="500"
+            controls
+            poster="img/dogs.jpeg"
+            muted
+            >
+        </video>
+        <br/>
+        <audio 
+            src="audio/Phil Collins - In The Air Tonight Official Music Video.mp3"
+            controls
+            autoplay>
+        </audio>
     </body>
 </html>
