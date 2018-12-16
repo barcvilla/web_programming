@@ -1,0 +1,6 @@
+ul
+    each page in pages
+        if(page == 'inicio')
+            li: a(href='/') #{page}
+        else
+            li: a(href=page + '.html') #{page}

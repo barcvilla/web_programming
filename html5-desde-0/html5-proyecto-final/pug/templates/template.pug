@@ -7,4 +7,13 @@ html
     head
         title #{pageTitle} | #{siteTitle}
         meta(charset="utf-8")
+        meta(name='description' content=description)
     body
+        header
+            img(src="/img/logo.jpg")
+            nav
+                include ../blocks/menu.pug
+
+            div
+                block banner
+                    img(src="/img/" + currentPage + ".jpg")
