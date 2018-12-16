@@ -8,12 +8,27 @@ html
         title #{pageTitle} | #{siteTitle}
         meta(charset="utf-8")
         meta(name='description' content=description)
-    body
-        header
-            img(src="/img/logo.jpg")
-            nav
+        meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+        link(rel='stylesheet' href='/css/styles-dist.css')
+    body(class=currentPage)
+        header.main-header
+            .logo-container
+                a(href="/")
+                    img(src="/img/logo.jpg").logo
+
+            nav.menu
                 include ../blocks/menu.pug
 
-            div
-                block banner
-                    img(src="/img/" + currentPage + ".jpg")
+        div.main-banner
+            block banner
+                img(src="/img/" + currentPage + ".jpg")
+            
+        .main-content
+            main
+                block main
+
+        aside.main-sidebar
+            block aside
+            
+        footer.main-footer
+            block footer

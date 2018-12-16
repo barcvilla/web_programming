@@ -1,0 +1,223 @@
+/* Variables*/
+:root {
+    --azul  : #006BA8;
+    --link  : #00A0EB;
+    --gris  : #777;
+    --texto : #444;
+}
+
+/* BASE (SMACSS) */
+*,
+*:after,
+*:before {
+    box-sizing : border-box;
+}
+
+body {
+    line-height    : 1.5;
+    color          : var(--texto);
+    font-family : sans-serif;
+    margin : 0;
+
+    /* El body en display flex permite crear un sticky footer */
+    display        : flex;
+    flex-direction : column;
+    min-height     : 100vh;
+}
+
+img {
+    max-width : 100%;
+}
+
+a {
+    color : var(--link);
+    text-decoration : none;
+}
+
+h1 {
+    color : var(--azul);
+}
+/* Fin base */
+
+/* Menu */
+.menu {
+    background : var(--azul);
+    padding    : .5em 0;
+}
+
+.menu ul {
+    display         : flex;
+    justify-content : center;
+    flex-wrap       : wrap;
+    margin          : 0 0 0 auto;
+    list-style      : none;
+    padding-left    : 0;
+}
+
+.menu li {
+    margin : .2em;
+}
+
+.menu a {
+    text-transform : uppercase;
+    font-size      : .8em;
+    color          : #FFF;
+    line-height    : 2.5;
+    display : block;
+    padding : 0 .7em;
+}
+
+.menu a:hover,
+.menu a.active {
+    text-decoration : none;
+    font-weight : bold;
+    background : rgba(0,0,0,.3);
+}
+/* Fin menu */
+
+/* Frontpage */
+.inicio main {
+    width : 100%;
+}
+
+.inicio .main-sidebar {
+    display : none;
+}
+/* Fin frontpage*/
+
+/* Contacto */
+.contacto .main-banner {
+    margin-bottom : 2em;
+}
+
+/* Layout (SMACSS)*/
+.logo {
+    width   : 140px;
+    display : block;
+    margin  : 1em auto;
+}
+
+.main-sidebar {
+    margin-top : 2em;
+}
+
+.main-content {
+    padding : 0 1em;
+}
+/* Fin layout */
+
+/* Footer */
+.main-footer {
+    background : #222;
+    color      : #DDD;
+    padding    : 1em;
+    text-align : center;
+    margin-top : auto;
+}
+
+.main-footer a {
+    color : #FFF;
+}
+/* Fin footer */
+
+/* Módulos (SMACSS) */
+.siguenos {
+    border-top  : 1px solid var(--gris);
+    padding-top : 1em;
+}
+
+.siguenos a {
+    font-size : .9em;
+    display   : block;
+}
+
+.siguenos a:before {
+    display      : inline-block;
+    margin-right : .3em;
+}
+/* Fin modulos */
+
+/* Desde 640px */
+@media screen and (min-width : 640px) {
+    .menu li {
+        margin : 0 1.5em;
+    }
+}
+
+/* Desde 768px */
+@media screen and (min-width : 768px) {
+    .main-content {
+        display       : flex;
+        padding-right : 2em;
+    }
+
+    .main-sidebar {
+        width        : 25%;
+        padding-left : 2em;
+    }
+
+    main {
+        width : 75%;
+    }
+
+    .main-footer .siguenos {
+        display         : flex;
+        justify-content : center;
+    }
+
+    .main-footer .siguenos a {
+        margin : 0 2em;
+    }
+
+    .siguenos {
+        border-top  : none;
+        padding-top : 0;
+    }
+}
+
+/* Desde 1024px */
+@media screen and (min-width : 1024px) {
+    .main-content {
+        width     : 100%;
+        max-width : 1024px;
+        margin    : 0 auto 3rem;
+    }
+
+    .main-banner img {
+        display   : block;
+        max-width : calc(1024px - 2em);
+        margin    : auto;
+    }
+
+    .menu {
+        background  : none;
+        margin-left : auto;
+    }
+
+    .menu li {
+        margin : 0 .5em;
+    }
+
+    .menu a {
+        color       : var(--azul);
+        display     : block;
+        line-height : 2.5;
+        padding     : 0 1em;
+    }
+
+    .menu a:hover,
+    .menu a.active {
+        background      : var(--azul);
+        color           : #FFF;
+        text-decoration : none;
+    }
+
+    .main-header {
+        width       : 100%; /* impide que se aplique tamaño automatico por flexbox */
+        max-width   : 1024px;
+        margin      : 0 auto;
+        display     : flex;
+        align-items : center;
+        padding     : 0 1em;
+    }
+}
