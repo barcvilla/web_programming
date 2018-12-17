@@ -1,4 +1,3 @@
-// estructura basica de todas las paginas en el proyecto
 block config
     include ../config/config.pug
 
@@ -9,28 +8,31 @@ html
         meta(charset="utf-8")
         meta(name='description' content=description)
         meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+        link(href="https://file.myfontastic.com/wXUejw7cV5KRrdtkS8GFFi/icons.css" rel="stylesheet")
+        link(rel='stylesheet' href='css/styles.css')
         link(rel='stylesheet' href='css/styles-dist.css')
-    body
+        
+    body(class=currentPage)
         header.main-header
             .logo-container
-                a(href="/")
-                    img(src="img/logo.jpg").logo
+              a(href="index.html")
+                  img(src='img/logo.jpg').logo
 
             nav.menu
                 include ../blocks/menu.pug
 
         div.main-banner
             block banner
-                img(src="img/" + currentPage + ".jpg")
-            
-        .main-content
-            main
-                block main
+                img(src='img/' + currentPage + '.jpg')
 
-        aside.main-sidebar
-            block aside
-                if siguenos == true
-                    include ../blocks/siguenos.pug
-            
+        .main-content
+          main
+              block main
+
+          aside.main-sidebar
+              block aside
+                  if siguenos == true
+                      include ../blocks/siguenos.pug
+
         footer.main-footer
             block footer

@@ -1,5 +1,4 @@
 
-<!-- estructura basica de todas las paginas en el proyecto-->
 <!-- Declaracion de variables globales--><!DOCTYPE html>
 <html>
   <head>
@@ -7,17 +6,23 @@
     <meta charset="utf-8">
     <meta name="description" content="Bienvenidos al sitio web Creativos ABC">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href="https://file.myfontastic.com/wXUejw7cV5KRrdtkS8GFFi/icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/styles-dist.css">
   </head>
-  <body>
+  <body class="inicio">
     <header class="main-header">
-      <div class="logo-container"><a href="/"><img class="logo" src="img/logo.jpg"></a></div>
+      <div class="logo-container"><a href="index.html"><img class="logo" src="img/logo.jpg"></a></div>
       <nav class="menu">
         <ul>
-          <li><a href="index.html">inicio</a></li>
+          <!-- Operador ternario que añade la clase active si el item de menu coincide con la pagina-->
+          <!-- Operador ternario que añade la clase active si el item de menu coincide con la pagina-->
           <li><a href="nosotros.html">nosotros</a></li>
+          <!-- Operador ternario que añade la clase active si el item de menu coincide con la pagina-->
           <li><a href="servicios.html">servicios</a></li>
+          <!-- Operador ternario que añade la clase active si el item de menu coincide con la pagina-->
           <li><a href="portafolio.html">portafolio</a></li>
+          <!-- Operador ternario que añade la clase active si el item de menu coincide con la pagina-->
           <li><a href="contacto.html">contacto</a></li>
         </ul>
       </nav>
@@ -38,12 +43,12 @@
           <Vivamus>velit est, viverra nec suscipit sit amet, bibendum eget ipsum. Suspendisse id pretium eros. Morbi nunc nunc, gravida ac arcu vitae, imperdiet dapibus nibh. Curabitur vitae interdum sem.</Vivamus>
         </p>
       </main>
+      <aside class="main-sidebar">
+      </aside>
     </div>
-    <aside class="main-sidebar">
-    </aside>
     <footer class="main-footer">
       <p>Creativos ABC -  Todos los derechos reservados</p>
-      <div><a href="http://www.facebook.com">siguenos en facebook </a><a href="http://www.twitter.com">siguenos en twitter </a><a href="http://www.youtube.com">siguenos en youtube </a></div>
+      <div><a class="icon-facebook" href="http://www.facebook.com">siguenos en facebook      </a><a class="icon-twitter" href="http://www.twitter.com">siguenos en twitter      </a><a class="icon-youtube" href="http://www.youtube.com">siguenos en youtube </a></div>
     </footer>
   </body>
 </html>

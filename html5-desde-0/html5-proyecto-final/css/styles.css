@@ -98,7 +98,11 @@ h1 {
 }
 
 .main-sidebar {
-    margin-top : 2em;
+    width        : 65%;
+    padding-left : 2em;
+    display: flex;
+
+    /*margin-top : 2em;*/
 }
 
 .main-content {
@@ -152,8 +156,10 @@ h1 {
     }
 
     .main-sidebar {
-        width        : 25%;
+        width        : 35%;
+        padding-top: 2em;
         padding-left : 2em;
+        display: flex;
     }
 
     main {
@@ -187,6 +193,13 @@ h1 {
         display   : block;
         max-width : calc(1024px - 2em);
         margin    : auto;
+    }
+
+    .main-sidebar {
+        width        : 25%;
+        padding-top: 2em;
+        padding-left : 2em;
+        display: flex;
     }
 
     .menu {
