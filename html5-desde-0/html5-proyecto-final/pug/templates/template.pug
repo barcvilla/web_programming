@@ -9,19 +9,19 @@ html
         meta(charset="utf-8")
         meta(name='description' content=description)
         meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
-        link(rel='stylesheet' href='/css/styles-dist.css')
-    body(class=currentPage)
+        link(rel='stylesheet' href='css/styles-dist.css')
+    body
         header.main-header
             .logo-container
                 a(href="/")
-                    img(src="/img/logo.jpg").logo
+                    img(src="img/logo.jpg").logo
 
             nav.menu
                 include ../blocks/menu.pug
 
         div.main-banner
             block banner
-                img(src="/img/" + currentPage + ".jpg")
+                img(src="img/" + currentPage + ".jpg")
             
         .main-content
             main
@@ -29,6 +29,8 @@ html
 
         aside.main-sidebar
             block aside
+                if siguenos == true
+                    include ../blocks/siguenos.pug
             
         footer.main-footer
             block footer

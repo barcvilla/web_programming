@@ -1,5 +1,6 @@
 extends templates/template.pug
-
+append config
+    -siguenos=false
 block main
     h1 Bienvenidos
     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac convallis felis. 
@@ -14,3 +15,4 @@ block main
     
 block footer
     p Creativos ABC -  Todos los derechos reservados
+    include blocks/siguenos.pug

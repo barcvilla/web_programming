@@ -1,6 +1,6 @@
 ul
     each page in pages
         if(page == 'inicio')
-            li: a(href='/') #{page}
+            li: a(href='index.html') #{page}
         else
             li: a(href=page + '.html' class=active) #{page}
