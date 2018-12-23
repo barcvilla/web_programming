@@ -1,0 +1,86 @@
+/*
+    SELECTORES SIMPLES: Entre los cuales tenemos
+
+    Selectores de Tipo (Selectores de etiqueta): Se les llama de etiqueta porque utilizan un tag de html. Este tipo de
+    selectores se recomienda NO UTILIZARLOS
+
+*/
+body{
+    background: black;
+    color: green;
+}
+
+/*
+    Selectores de ID: Este tipo de selectores se recomienda NO UTILIZARLOS. Los selectores de ID se indican en css con el 
+    signo (#)
+*/
+#item1
+{
+    color: blue;
+}
+
+/*
+    Selectores de Clase (la mejor practica): Los selectores de clase se indican en css con el signo (.)
+*/
+
+.menu-item
+{
+    color: green;;
+}
+
+.red
+{
+    color: red;
+}
+
+/*
+    Especificidad: Es un algoritmo de css por el cual se resuelven los conflictos de estilos. Los selectores son:
+    Selectores:         valor:
+    ==========          =====
+    Type                1
+    Class               10
+    Id                  100
+    Inline              1000
+
+*/
+
+/* 
+    Selectores Compuestos: 
+    Selector Descendiente: tiene la forma:
+    .ancestro descendiente
+    {
+        
+    }
+*/
+
+ul span{ /*el espacio significa descendiente (hijo)*/
+    color: red;
+}
+
+.menu-country-items
+{
+    color: green;
+}
+
+/*
+    Selectores compuestos:
+    Hijos Directos
+*/
+li > span{
+    color: blue;
+}
+
+/* Selector Hermanos siguiente (adyacente): Selecciona el elemento siguiente*/
+h1 + p{
+    color: blue;
+}
+
+/* Selector Hermanos siguientes: Selecciona a todos los elementos siguientes */
+h1 ~ p{
+    color: red;
+}
+
+/* Combinar Selectores: para combinar selectores no debemos dejar espacio en blanco entre el elemento y la clase */
+h1.parrafo1{
+    color: yellow;
+}
