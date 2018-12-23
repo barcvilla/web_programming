@@ -84,3 +84,61 @@ h1 ~ p{
 h1.parrafo1{
     color: yellow;
 }
+
+/* 
+    Selectores de Atributos
+    Usan corchetes [] para indicar el atributo 
+*/
+[href="https://www.facebook.com/"]
+{
+    color: white;
+    font-size: 2em;
+}
+
+a[title]
+{
+    color: yellowgreen;
+}
+
+/* Uso de Comodin (^), este comodin significa comienza con...*/
+a[title^="red"]
+{
+    color: blueviolet;
+}
+
+/*Uso de comodin ($), este comodin significa termina con...*/
+a[href$="amazon.com"]
+{
+    background: url(/Css-desde-cero/clase2/cart.png) left / contain no-repeat;
+    padding-left: 1.5em;
+    color: aqua;
+}
+
+/* Uso de comodin (*), este comodin significa contiene
+    a[href*="amazon.com"]{}
+*/
+
+/* 
+    Pseudo Clases: Son selectores dinamicos que responden al contexto, a la interaccion del usuario o alguna propiedad de
+    elementos. Las pseudo clases se indican en css con dos puntos (:) 
+*/
+a[href*="hosting"]
+{
+    display: inline-block;
+    background: green;
+    color: black;
+    padding: 0 1em;
+    line-height: 2.5;
+    text-decoration: none;
+}
+
+a[href*="hosting"]:hover
+{
+    background: darkblue;
+}
+
+a[href*="hosting"]:active
+{
+    transform: scale(0.9);
+}
+
