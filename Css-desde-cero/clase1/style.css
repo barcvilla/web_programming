@@ -1,3 +1,65 @@
-body{
-    background: lime;
+/*
+    Conceptos principales a entender en CSS
+
+    Selectores
+    Especificidad
+    Cascada
+    Herencia
+
+    Conceptos Avanzados
+
+    Box-Model
+    Position
+    Flexbox
+    FlexGrid
+*/
+
+/*
+    Selectores: Los selectores nos indican que elementos del html se veran afectados por los estilos.
+    Selectores de Etiqueta: Este tipo de selectores utilizan las etiquetas html de elemento.
+    Selectores Descendientes: Son selectores separados por un espacio. El primer es el padre y el segundo es un hijo o un 
+                              descendiente de cualquier nivel
+*/
+
+/*selector de etiqueta: span no es un hijo directo de body pero es un descendiente. No debemos abusar de los selectores
+  descendientes*/
+body
+{
+    background: black;
+    --color: green;
+    color: var(--color);
 }
+
+h1 
+{
+    color: green;
+    /*Estilos de text*/
+    font-size: 60px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 50px; /* interlineado
+}
+
+/*
+    Tipos de datos en CSS: 
+    color es un tipo de dato, tambien se puede representar el color por funcion, hsl(0,100%,50%), rgb(255,0,0), #ff0000
+    unidades de tiempo: segundos(s), milisegundos(ms), degree(deg), vuelta(turn)
+    las operaciones en css se realizan con la funcion calc(). calc(100% - 100px)
+    unidades: pixel(px) em, rem
+    numeros
+    string
+*/
+
+/*
+    Variables en CSS: en CSS las variables se declaran con doble guion. Las variables en css tienen scope en el DOM. Si el valor
+    de una variable se aplica a un selector padre, el valor tambien se aplica a los hijos
+*/
+h2
+{
+    --color: green;
+    color: var(--color);
+}
+
+/*Estilos de Texto
+
+
+*/
