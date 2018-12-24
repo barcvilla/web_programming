@@ -142,3 +142,35 @@ a[href*="hosting"]:active
     transform: scale(0.9);
 }
 
+/* 
+    Pseudoclases de Formularios 
+    :enabled | :disable
+    :in-range | :out-of-range
+*/
+input:focus{
+    background: yellow;
+}
+
+.estado:checked + label
+{
+    font-size: 2em;
+    background: yellow;
+}
+
+form :optional{
+    border: 1px solid green;
+}
+
+form :required
+{
+    border: 2px solid red;
+}
+
+form :valid{
+    background: yellow;
+}
+
+form :invalid
+{
+    background: red;
+}
