@@ -1,0 +1,28 @@
+/*
+    BOX MODEL
+
+    En html existen los elementos de bloque y elementos de linea. 
+    Elementos de bloque: Estos elementos se dibujan de lado a lado de la pantalla, no importa que su contenido ocupe o no ocupe
+                         el ancho de la pantalla. El ViewPort es todo el espacio disponible para nuestra aplicacion. Un elemento
+                         bloque ocupa todo el espcio horizontal disponible del ViewPort
+    Elementos de Linea: Estos elementos se colocan uno al lado del otro. Estos elementos obtienen sus dimensiones del contenido que
+                        manejan. Si queremos que un elemento de linea ocupe todo el espacio debemos aplicar la propiedad block
+
+    Nota: Los elementos de linea no se les aplica la propiedad height a menos que se utilice la propiedad display: block, 
+          solo los elementos de bloque tienen esa propiedad
+*/
+body{
+    background: black;
+}
+h1
+{
+    color: green;
+}
+
+a{
+    display: inline-block; /* se colocan los elementos en linea pero se conservan la propieda de bloque*/
+    color: blue;
+    background: white;
+    padding: .5em 1em;
+    text-decoration: none; 
+}
