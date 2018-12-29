@@ -174,3 +174,44 @@ form :invalid
 {
     background: red;
 }
+
+/* Pseudoclases - Child */
+p:first-child
+{
+    background: blue;
+}
+
+p:last-child
+{
+    background: red;
+}
+
+/*
+    Buscamos el tercer hijo que sea p
+    p:nth-child(3n) y cuenta de 3 en 3
+    p:nth-child(3n+1) cuenta de 3 en 3 y suma 1
+    p:nth-last-child(3n) empieza a contar desde el final de la lista hacia el inicio
+    nota: n es un multiplicador que siempre inicia en 0 y se incremente en 1
+
+*/
+
+p:nth-child(3)
+{
+    background: yellow;
+    color: red;
+}
+
+/* Pseudo clase Type 
+    Nos busca primero el tipo. Tambien funcionan con clases
+    Pseudoclase         Equivalente
+    :first-child        :first-of-type
+    :last-child         :last-of-type
+    :nth-child()        :nth-of-type()
+    :nth-last-child()   :nth-of-last-type()
+*/ 
+li:nth-of-type(3)
+{
+    background: white;
+    color: balck;
+}
+
