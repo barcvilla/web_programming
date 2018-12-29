@@ -181,10 +181,12 @@ p:first-child
     background: blue;
 }
 
+/*
 p:last-child
 {
     background: red;
 }
+*/
 
 /*
     Buscamos el tercer hijo que sea p
@@ -194,12 +196,13 @@ p:last-child
     nota: n es un multiplicador que siempre inicia en 0 y se incremente en 1
 
 */
-
-p:nth-child(3)
+/*
+p:nth-child(2)
 {
     background: yellow;
     color: red;
 }
+*/
 
 /* Pseudo clase Type 
     Nos busca primero el tipo. Tambien funcionan con clases
@@ -213,5 +216,31 @@ li:nth-of-type(3)
 {
     background: white;
     color: balck;
+}
+
+/* Selectores Agrupados 
+   Utilizamos los selectores agrupados cuando queremos aplicar estilos a mas de un elemento. Existe dos formas para resulver 
+   esta necesidad. 
+   1. Asignarle el mismo nombre de clase a ambos elementos. Si cada elemento ya contiene una clase distinta esta este primer
+      forma no se podra aplicar.
+   
+
+*/ 
+.titulo
+{
+    color: blue;
+}
+.parrafo
+{
+    color: green;
+}
+
+/*
+    Cuando se aplican los mismos estilo en varias clases, se recomienda utilizar los selectores agrupados
+*/
+.titulo, 
+.parrafo
+{
+    text-decoration: underline;
 }
 
