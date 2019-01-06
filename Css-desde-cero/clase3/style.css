@@ -13,6 +13,7 @@
 */
 body{
     background: black;
+    color: green;
 }
 h1
 {
@@ -25,4 +26,133 @@ a{
     background: white;
     padding: .5em 1em;
     text-decoration: none; 
+}
+
+/* 
+    Elementos en el Box Model: Los elementos en el Box Model incluyen, elementos internos y elemetos externos
+    
+    Los elementos internos en el Box Model son: 
+    Content
+    Padding
+    Border
+
+    El elemento externo en el Box Model es:
+    Margin
+*/
+.elemento
+{
+    background: red;
+    /*
+        padding es el espacio que existe entre el contenido y la caja. Existe el padding top - right - botom - left
+        este padding se puede aplicar todos en una sola linea siguiendo las lineas del reloj.
+        Si solo se indica un valor, este se aplica a los 4 paddings
+        Si solo se indican dos valores, esto significa que un valor es para top-bottom y el otro valor para right-left.
+        Si solo se indican 3 valores, esto significa que el primer valor es para top, el segundo para right, 
+        el tercero para bottom y se aplica para left el valor usado para right
+    */
+    padding: 20px 100px 60px 10px; 
+    display: inline-block;
+    /*
+        El Margin utiliza el mismo concepto que el padding.
+        Los margenes horizontales se suman, Si hay dos elementos uno con margin right 20 y el otro elemento margin left 10, ambos
+        se suman y se mostrara un margin de 30 
+        Los margenes verticales se colapsan y no se suman. Siempre gana el elemento que contenga mayor margen
+    */
+    margin: 20px;
+}
+
+/*
+    Las dimensiones del Box Model son: Cuando las dimensiones de la caja no ha sido declaradas (width, heigh), estas se miden:
+    Alto: El alto se calcula sumando contenido + padding + border
+    Ancho: El alto se calcula sumando contenido + padding + border
+
+    Cuando las dimensiones de la caja (width, heigh) han sido declaradas se calcula:
+    Alto: heigh + padding + border
+    Ancho: width + padding + border
+*/
+.caja
+{
+    /* 
+        Una caja con dimensiones declaradas: segun el navegador la caja mide: 504 x 404. Este resultado resulta de la suma de:
+        300 width + 100 padding left + 2 border left + 100 padding right + 2 border right = 504
+        200 height + 100 padding top + 2 border top +  100 padding bottom + 2 border bottom = 404  
+    */
+    width: 300px;
+    height: 200px;
+    border: 2px solid red;
+    padding: 100px;
+    /*
+        Box Sizing: Es una propiedad que esta conformado por:
+        Border Box
+        Padding Box
+        Content Box
+
+        El valor por defecto que utiliza el Box sizing es el Content Box
+    */
+    box-sizing: border-box;
+
+    /*
+        Este codigo no debe faltar si utilizamos un style de css puro (sin framework)
+        *,
+        *:before,
+        *:after
+        {
+            box-sizing: border-box;
+        }
+    */
+
+    
+}
+/*
+    Borders: Es el trazo que rodea a la caja
+*/
+.borders
+{
+    width: 300px;
+    height: 200px;
+    margin: 5em auto;
+    /* 
+        grosor, estilo(dashed, dotted), color
+        Estas propiedades equivales a:
+        border-width, border-style, border-color
+    */
+    border: 2px solid red; 
+    border-bottom: none;
+    border-left: dashed green;
+}
+
+/*
+    Border Radius
+*/
+.border-radio
+{
+    width: 300px;
+    height: 200px;
+    margin: 5em auto;
+    border: 5px solid red;
+    border-radius: 10%;
+}
+
+/*
+    Box-Background
+*/
+.box-background
+{
+    width: 400px;
+    height: 500px;
+    border: 20px solid red;
+    padding: 10px;
+    /*puedo colocar varias imagenes de background*/
+    background: url(https://i3.cpcache.com/product/1457216423/ICHTHUS_FISH_Oval_Car_Magnet_300x300.jpg?height=300&width=300&qv=90&side=front),
+    url(https://steamuserimages-a.akamaihd.net/ugc/858361687109912111/B1EE6DB99FD7695AB88D30CE6D375CBAD373042B/),grey;
+    /*Si tengo varias imagenes de background, en repeat, position, size etc, puedo indicar un valor por cada imagen de
+      background, asi tendria. background-repeat: no-repeat repeat*/
+    background-repeat: no-repeat;
+    background-position: bottom right, center;
+    /*reduce al 50% la imagen con respecto del contenedor
+      se puede utilizar con background-size: cover - cubre toda la caja con la imagen de background.
+      background-size: contain - contiene la imagen de background en la caja sin salirse de la caja
+    */
+    background-size: 30%, cover;
+    background-clip: content-box; /*la imagen de background solo se muestra en el content-box*/ 
 }
