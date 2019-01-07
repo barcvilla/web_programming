@@ -12,7 +12,7 @@
           solo los elementos de bloque tienen esa propiedad
 */
 body{
-    background: black;
+    /*background: black;*/
     color: green;
 }
 h1
@@ -155,4 +155,68 @@ a{
     */
     background-size: 30%, cover;
     background-clip: content-box; /*la imagen de background solo se muestra en el content-box*/ 
+}
+
+/*
+    Pseudo Elementos: Todos los pseudo elementos tienen :before y :after. Los pseudo elementos se indican con dos puntos d dobles
+    (::). Los pseudo elementos permiten crear contenidos en el html.
+*/
+.title::before{
+    content: '';
+    /*con esta propiedad mostramos la caja ya que un elemento inline no tiene width ni height, salvo que tenga contenido en
+      ese caso el inline se ajusta al contenido*/
+    display: block;
+    width: 200px;
+    height: 200px;
+    background: green;
+}
+
+.title::after{
+    content: ' Mundo'
+}
+
+.download
+{
+    display: block;
+    margin-bottom: .5em;
+}
+
+.download::before{
+    display: inline-block;
+    margin-right: 5px;
+}
+
+[href$="pdf"]::before
+{
+    content: url(https://www.inmoblog.com/wp-content/uploads/2012/07/pdf.png);
+}
+
+[href$="txt"]::before{
+    content: url(https://dl1.cbsistatic.com/i/r/2017/05/24/163d7db2-2975-42c0-94aa-0f6dc6fe2e46/thumbnail/32x32/308b6bf9821b5e66bb82888626b7364f/iconimg224161.png);
+}
+
+/*
+    FLOAT Y OVERFLOW
+    Float: esta propiedad permite que un elemento salga del flujo (flote)
+    Overflow: propiedad que maneja a los elementos que salgan del padre. Su valor posibles son:
+    oveflow hidden, scroll, auto.
+*/
+.img
+{
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+article
+{
+    width: 80%;
+    margin: 1em auto;
+    border: 1px solid red;
+    overflow: hidden; /*el padre envuelve a los hijos float*/
+}
+
+pre{
+    width: 350px;
+    border: 2px solid grey;
+    overflow: auto; /*adiciona un scroll si se necesita*/
 }
