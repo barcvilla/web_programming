@@ -1,0 +1,47 @@
+/* 
+    Position: por medio de esta propiedad podemos colocar un elemento donde quisieramos
+    Flow (Flujo)
+    Se llama flujo a el orden como los elementos van apareciendo en la pantalla
+    A que se llama que un elemento se encuentre posicionado?
+    Se llama elemento posicionado a todo elemento que ha salido de su flujo por medio de la propiedad position
+    Cuando un elemento esta posicionado, se sale del flujo
+    
+    Los elementos que reciben la propiedad position adquieren nuevas propiedades:
+
+    top
+    right
+    botoom
+    left
+    z-index : permite controlar el orden en las capas
+
+*/
+div{
+    border: 3px dashed red;
+}
+h1{
+    background: yellow;
+    display: inline-block; /*el background se aplica solo al texto*/
+    margin: 0;
+    /*
+        La apariencia de los elementos en la pagina producida por las propiedades son inesperadas, esto se debe a que
+        top, bottom, left right no indican hacia donde se mueven. Estas propiedades indican el lugar desde donde se empiezan a
+        contar, siempre la cuenta es: 
+        Positivo (de arriba hacia abajo y de izquiera a derecha)
+        Negativo (de abajo hacia arriba y de derecha a izquierda)
+        Cuando movemos un elemento utilizando una de estas 4 propiedades, estamos indicando donde elementos:
+        Elemento del Contexto
+        Objeto a mover
+    */
+    top: 50px; /*entre el top del contexto es decir el elemento div y el top del elemento aplicamos 50px*/
+    left: 100px; /*del left del contexto al left del elemento aplicamos 20px*/
+    /*
+        Position relative: el elemento conserva su espacion en el flujo, conserva sus dimensiones originales y su contexto es
+        su posicion inicial
+    */
+    position: relative;
+
+    /*position: absolute;*/
+    /*position: relative;*/
+    /*position: fixed;*/
+}
+
